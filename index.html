@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thugs</title>
+    <link rel="shortcut icon" href="https://app.soulsie.xyz/assets/images/THUG.png" type="image/x-icon" />
+</head>
+<body>
+    <h1>Thugs fr</h1>
+    <hr>
+    <h3 id="thing" >Your IP: </h3>
+    <p>Should've followed the link instead of searching in our thugging community</p>
+    <script>
+
+        const thing = document.getElementById('thing')
+
+        fetch("https://ipapi.co/json")
+        .then((response) => response.json())
+        .then((data) => {
+            thing.innerHTML = 'Your IP: ' + data.ip
+        })
+    </script>
+</body>
+</html>
